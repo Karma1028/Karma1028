@@ -85,11 +85,7 @@ A production-style portfolio: profile, journey, skills, projects and contact, wi
 
 ## 🛠️ How I work
 
-```text
- raw data ──▶ clean + test ──▶ model / segment ──▶ interactive story ──▶ decision
-   (Excel,       (pandas,        (XGBoost,           (Streamlit, React,     (what a
-   surveys)       SQL, stats)     scikit-learn)       Plotly, D3)            client does)
-```
+<p align="center"><b>raw data</b> &nbsp;→&nbsp; <b>clean + test</b> &nbsp;→&nbsp; <b>model / segment</b> &nbsp;→&nbsp; <b>interactive story</b> &nbsp;→&nbsp; <b>decision</b></p>
 
 - **Statistics first.** Significance tests and honest segment definitions before any chart.
 - **Ship it as a product.** If a stakeholder can't click it, it isn't finished.
@@ -120,7 +116,7 @@ A production-style portfolio: profile, journey, skills, projects and contact, wi
 
 <br>
 
-## 🌱 Consistency
+## 🌱 Recent activity
 
 <p align="center">
   <img src="assets/activity.svg" alt="Contribution heatmap for the last 12 months" width="100%">

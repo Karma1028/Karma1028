@@ -66,7 +66,7 @@ def card(x, y, w, h, delay):
 def kpi_svg(own, langs, cal):
     cc = cal["contributionsCollection"]
     top = [
-        (str(len(own)), "repos built", "since Aug 2025"),
+        (str(len([r for r in own if r["name"] != USER])), "public repos", "since Aug 2025"),
         (str(cc["totalCommitContributions"]), "commits", "last 12 months"),
         (str(len([l for l in langs if l not in SKIP_LANGS])), "languages", "Python · TS · JS"),
         (str(cc["contributionCalendar"]["totalContributions"]), "contributions", "last 12 months"),
@@ -75,22 +75,22 @@ def kpi_svg(own, langs, cal):
         ("9,134", "customers modelled", "CLV · XGBoost"),
         ("176", "brand codes netted", "MIS · Royal Enfield"),
         ("10", "dashboard views", "KARMA-OS"),
-        ("3", "AI providers wired", "Groq · Gemini · OpenRouter"),
+        ("3", "AI providers wired", "Groq·Gemini·OpenRouter"),
     ]
-    w, h = 1200, 330
+    w, h = 900, 300
     o = [svg_open(w, h)]
     o.append('<text class="s" x="4" y="22" fill="#94a3b8" font-size="13" letter-spacing="2">ACTIVITY</text>')
-    o.append('<text class="s" x="4" y="190" fill="#94a3b8" font-size="13" letter-spacing="2">WORK IN NUMBERS</text>')
-    cw, gap = 285, 20
-    for row, (items, y0, base) in enumerate(((top, 34, 0.0), (work, 202, 0.5))):
+    o.append('<text class="s" x="4" y="166" fill="#94a3b8" font-size="13" letter-spacing="2">WORK IN NUMBERS</text>')
+    cw, gap = 213, 16
+    for row, (items, y0, base) in enumerate(((top, 32, 0.0), (work, 178, 0.5))):
         for i, (num, label, sub) in enumerate(items):
             x = i * (cw + gap)
             d = base + i * 0.12
-            o.append(card(x, y0, cw, 110, d))
-            o.append(f'<rect x="{x}" y="{y0}" width="5" height="110" rx="2.5" fill="url(#g)"/>')
-            o.append(f'<text class="s" x="{x+28}" y="{y0+58}" font-size="46" font-weight="800" fill="#f8fafc">{num}</text>')
-            o.append(f'<text class="s" x="{x+28}" y="{y0+82}" font-size="15" font-weight="600" fill="#cbd5e1">{label}</text>')
-            o.append(f'<text class="m" x="{x+28}" y="{y0+100}" font-size="11.5" fill="#2dd4bf">{sub}</text>')
+            o.append(card(x, y0, cw, 112, d))
+            o.append(f'<rect x="{x}" y="{y0}" width="5" height="112" rx="2.5" fill="url(#g)"/>')
+            o.append(f'<text class="s" x="{x+22}" y="{y0+54}" font-size="40" font-weight="800" fill="#f8fafc">{num}</text>')
+            o.append(f'<text class="s" x="{x+22}" y="{y0+80}" font-size="15" font-weight="600" fill="#cbd5e1">{label}</text>')
+            o.append(f'<text class="m" x="{x+22}" y="{y0+100}" font-size="11.5" fill="#2dd4bf">{sub}</text>')
             o.append("</g>")
     o.append("</svg>")
     return "".join(o)
@@ -104,13 +104,13 @@ def level(n, mx):
 
 
 def activity_svg(cal):
-    weeks = cal["contributionsCollection"]["contributionCalendar"]["weeks"]
+    weeks = cal["contributionsCollection"]["contributionCalendar"]["weeks"][-26:]
     mx = max((d["contributionCount"] for wk in weeks for d in wk["contributionDays"]), default=1) or 1
     total = cal["contributionsCollection"]["contributionCalendar"]["totalContributions"]
-    cell, pad = 17, 4
-    w, h = 1200, 7 * (cell + pad) + 70
+    cell, pad = 28, 6
+    w, h = 900, 7 * (cell + pad) + 70
     o = [svg_open(w, h)]
-    o.append(f'<text class="s" x="4" y="22" fill="#94a3b8" font-size="13" letter-spacing="2">LAST 12 MONTHS · {total} CONTRIBUTIONS</text>')
+    o.append(f'<text class="s" x="4" y="22" fill="#94a3b8" font-size="13" letter-spacing="2">LAST 6 MONTHS · {total} CONTRIBUTIONS IN THE LAST YEAR</text>')
     x0 = 4
     step = (w - 8) / max(len(weeks), 1)
     for wi, wk in enumerate(weeks):
@@ -120,22 +120,22 @@ def activity_svg(cal):
             y = 40 + wd * (cell + pad)
             c = d["contributionCount"]
             o.append(
-                f'<rect x="{x:.1f}" y="{y}" width="{cell}" height="{cell}" rx="4" fill="{level(c, mx)}" '
+                f'<rect x="{x:.1f}" y="{y}" width="{cell}" height="{cell}" rx="6" fill="{level(c, mx)}" '
                 f'style="animation:in .5s ease-out {wi*0.025:.2f}s both"><title>{d["date"]}: {c}</title></rect>'
             )
     ly = h - 14
-    o.append(f'<text class="s" x="{w-250}" y="{ly}" font-size="12" fill="#94a3b8">less</text>')
+    o.append(f'<text class="s" x="{w-250}" y="{ly}" font-size="13" fill="#94a3b8">less</text>')
     for i, col in enumerate(("#161b33", "#134e4a", "#0f766e", "#2dd4bf", "#fbbf24")):
         o.append(f'<rect x="{w-215+i*22}" y="{ly-11}" width="14" height="14" rx="3.5" fill="{col}"/>')
-    o.append(f'<text class="s" x="{w-95}" y="{ly}" font-size="12" fill="#94a3b8">more</text>')
+    o.append(f'<text class="s" x="{w-95}" y="{ly}" font-size="13" fill="#94a3b8">more</text>')
     o.append("</svg>")
     return "".join(o)
 
 
 def langs_svg(langs):
-    items = sorted(((k, v) for k, v in langs.items() if k not in SKIP_LANGS), key=lambda kv: -kv[1])[:6]
+    items = sorted(((k, v) for k, v in langs.items() if k not in SKIP_LANGS), key=lambda kv: -kv[1])[:5]
     total = sum(v for _, v in items) or 1
-    w, h = 1200, 120
+    w, h = 900, 130
     o = [svg_open(w, h)]
     o.append('<text class="s" x="4" y="22" fill="#94a3b8" font-size="13" letter-spacing="2">LANGUAGES · PUBLIC CODE</text>')
     bar_x, bar_w, bar_y = 4, w - 8, 38
@@ -150,9 +150,9 @@ def langs_svg(langs):
     col_w = bar_w / max(len(items), 1)
     for i, (name, val) in enumerate(items):
         x = bar_x + i * col_w
-        o.append(f'<circle cx="{x+7}" cy="86" r="6" fill="{LANG_COLORS.get(name, "#64748b")}"/>')
-        o.append(f'<text class="s" x="{x+20}" y="91" font-size="15" font-weight="600" fill="#e2e8f0">{name}</text>')
-        o.append(f'<text class="m" x="{x+20}" y="109" font-size="12" fill="#94a3b8">{100*val/total:.1f}%</text>')
+        o.append(f'<circle cx="{x+7}" cy="92" r="6" fill="{LANG_COLORS.get(name, "#64748b")}"/>')
+        o.append(f'<text class="s" x="{x+20}" y="97" font-size="15" font-weight="600" fill="#e2e8f0">{name}</text>')
+        o.append(f'<text class="m" x="{x+20}" y="116" font-size="13" fill="#94a3b8">{100*val/total:.1f}%</text>')
     o.append("</svg>")
     return "".join(o)
 
