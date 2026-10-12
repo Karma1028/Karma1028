@@ -27,6 +27,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/kpi-*.svg assets/activity-v2.svg assets/langs-v2.svg assets/timeline-v2.svg
+          git add assets/kpi-*-v2.svg assets/activity-v3.svg assets/langs-v3.svg assets/timeline-v3.svg
           git diff --staged --quiet || git commit -m "chore: refresh profile charts"
           git push

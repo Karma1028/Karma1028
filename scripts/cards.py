@@ -25,7 +25,7 @@ HEAD = (
 )
 
 
-def card(slug, color, tag, title, lines, chips, viz):
+def card(slug, color, tag, title, lines, chips, viz, linked=False):
     w, h = 440, 232
     o = [HEAD.format(w=w, h=h, label=f"{title}: {' '.join(lines)}", extra="")]
     o.append(
@@ -40,15 +40,17 @@ def card(slug, color, tag, title, lines, chips, viz):
     o.append(f'<text class="m" x="33" y="39" font-size="10.5" letter-spacing="1" fill="{color}">{tag}</text>')
     o.append(f'<text class="s" x="22" y="78" font-size="19" font-weight="800" fill="#f8fafc">{title}</text>')
     for i, ln in enumerate(lines):
-        o.append(f'<text class="s" x="22" y="{102+i*18}" font-size="13" fill="#94a3b8">{ln}</text>')
+        o.append(f'<text class="s" x="22" y="{102+i*19}" font-size="14" fill="#b6c2d6">{ln}</text>')
     x = 22
     for val, lab in chips:
         o.append(f'<text class="m" x="{x}" y="200" font-size="12" font-weight="700" fill="#e2e8f0">{val}</text>')
-        o.append(f'<text class="m" x="{x}" y="215" font-size="10" fill="#64748b">{lab}</text>')
+        o.append(f'<text class="m" x="{x}" y="215" font-size="11" fill="#94a3b8">{lab}</text>')
         x += max(len(val), len(lab)) * 7.4 + 22
-    o.append(f'<g transform="translate(286,46)">{viz}</g>')
+    if linked:
+        o.append(f'<text class="m" x="{w-20}" y="39" text-anchor="end" font-size="11" font-weight="700" fill="{color}">open repo ↗</text>')
+    o.append(f'<g transform="translate(286,56)">{viz}</g>')
     o.append("</svg>")
-    (OUT / f"card-{slug}.svg").write_text("".join(o), encoding="utf-8")
+    (OUT / f"card-{slug}-v2.svg").write_text("".join(o), encoding="utf-8")
 
 
 def viz_clv(c):
@@ -64,7 +66,7 @@ def viz_clv(c):
         f'style="animation:draw 1.8s ease-out .9s forwards"/>'
     )
     dot = '<circle cx="126" cy="-2" r="4.5" fill="#fbbf24" style="animation:fade .4s ease-out 2.6s both"/>'
-    lab = f'<text class="m" x="0" y="124" font-size="10" fill="#64748b">value is concentrated</text>'
+    lab = f'<text class="m" x="0" y="124" font-size="11" fill="#94a3b8">value is concentrated</text>'
     return bars + curve + dot + lab
 
 
@@ -82,12 +84,12 @@ def viz_stock(c):
             f'<rect x="{x}" y="{top}" width="8" height="{max(bot-top,4)}" rx="1.5" fill="{col}"/></g>'
         )
     out.append('<line x1="62" x2="62" y1="2" y2="104" stroke="#fbbf24" stroke-dasharray="3 4" stroke-opacity=".8"/>')
-    out.append('<text class="m" x="66" y="8" font-size="9" fill="#fbbf24">demerger</text>')
+    out.append('<text class="m" x="66" y="8" font-size="10" fill="#fbbf24">demerger</text>')
     out.append(
         f'<path d="M0 98 Q 30 70 62 88 T 128 80" fill="none" stroke="{c}" stroke-opacity=".5" stroke-width="2" '
         f'stroke-dasharray="200" stroke-dashoffset="200" style="animation:draw 2s ease-out 1.2s forwards"/>'
     )
-    out.append('<text class="m" x="0" y="124" font-size="10" fill="#64748b">TMCV  vs  TMPV</text>')
+    out.append('<text class="m" x="0" y="124" font-size="11" fill="#94a3b8">TMCV  vs  TMPV</text>')
     return "".join(out)
 
 
@@ -104,8 +106,8 @@ def viz_os(c):
             f'dur="1.6s" begin="{i*.3:.1f}s" fill="freeze"/></circle>'
         )
     out.append('<text class="m" x="64" y="58" text-anchor="middle" font-size="16" font-weight="800" fill="#f8fafc">10</text>')
-    out.append('<text class="m" x="64" y="70" text-anchor="middle" font-size="8" fill="#64748b">views</text>')
-    out.append('<text class="m" x="0" y="124" font-size="10" fill="#64748b">fitness · vault · memory</text>')
+    out.append('<text class="m" x="64" y="70" text-anchor="middle" font-size="9" fill="#94a3b8">views</text>')
+    out.append('<text class="m" x="0" y="124" font-size="11" fill="#94a3b8">fitness · vault · memory</text>')
     return "".join(out)
 
 
@@ -118,8 +120,8 @@ def viz_radio(c):
     )
     live = (
         '<circle cx="4" cy="-2" r="3.5" fill="#34d399" style="animation:pulse 1.6s infinite"/>'
-        '<text class="m" x="13" y="1.5" font-size="10" fill="#34d399">live</text>'
-        '<text class="m" x="0" y="124" font-size="10" fill="#64748b">log jaag rahe hain</text>'
+        '<text class="m" x="13" y="1.5" font-size="11" fill="#34d399">live</text>'
+        '<text class="m" x="0" y="124" font-size="11" fill="#94a3b8">log jaag rahe hain</text>'
     )
     return bars + live
 
@@ -138,7 +140,7 @@ def viz_case(c):
         '<g style="animation:fade .5s ease-out 1.2s both"><circle cx="118" cy="30" r="12" fill="#34d399" fill-opacity=".18"/>'
         '<path d="M112 30 l5 5 l9 -10" fill="none" stroke="#34d399" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></g>'
     )
-    out.append('<text class="m" x="0" y="124" font-size="10" fill="#64748b">html → pptx · gate ✓</text>')
+    out.append('<text class="m" x="0" y="124" font-size="11" fill="#94a3b8">html → pptx · gate ✓</text>')
     return "".join(out)
 
 
@@ -151,7 +153,7 @@ def viz_reel(c):
         for x, w in blocks:
             out.append(f'<rect x="{x}" y="{y+3}" width="{w}" height="16" rx="4" fill="{c}" fill-opacity="{.85-r*.2:.2f}"/>')
     out.append(f'<g style="animation:sweep 3.4s linear infinite"><rect x="0" y="0" width="2" height="100" fill="#fbbf24"/></g>')
-    out.append('<text class="m" x="0" y="124" font-size="10" fill="#64748b">script · voice · render</text>')
+    out.append('<text class="m" x="0" y="124" font-size="11" fill="#94a3b8">script · voice · render</text>')
     return "".join(out)
 
 
@@ -173,40 +175,40 @@ def terminal():
     o.append(f'<rect width="{w}" height="34" rx="14" fill="#151a33"/><rect y="20" width="{w}" height="14" fill="#151a33"/>')
     for i, col in enumerate(("#fb7185", "#fbbf24", "#34d399")):
         o.append(f'<circle cx="{20+i*18}" cy="17" r="5.5" fill="{col}"/>')
-    o.append(f'<text class="m" x="{w//2}" y="21" text-anchor="middle" font-size="12" fill="#64748b">karma: about.sh</text>')
+    o.append(f'<text class="m" x="{w//2}" y="21" text-anchor="middle" font-size="12" fill="#94a3b8">karma: about.sh</text>')
     for i, (kind, text, delay) in enumerate(lines):
         y = 68 + i * 24
         o.append(f'<g style="animation:fade .01s linear {delay}s both">')
         if kind == "cmd":
-            o.append(f'<text class="m" x="20" y="{y}" font-size="15"><tspan fill="#2dd4bf" font-weight="700">$ </tspan><tspan fill="#e2e8f0">{text}</tspan></text>')
+            o.append(f'<text class="m" x="20" y="{y}" font-size="16"><tspan fill="#2dd4bf" font-weight="700">$ </tspan><tspan fill="#e2e8f0">{text}</tspan></text>')
         else:
             fill = "#fbbf24" if kind == "hot" else "#94a3b8"
-            o.append(f'<text class="m" x="20" y="{y}" font-size="15" fill="{fill}">{text}</text>')
+            o.append(f'<text class="m" x="20" y="{y}" font-size="16" fill="{fill}">{text}</text>')
         o.append("</g>")
     o.append(f'<rect x="20" y="{68+8*24-12}" width="9" height="16" fill="#2dd4bf" style="animation:blink 1s steps(1) 6s infinite"/>')
     o.append("</svg>")
-    (OUT / "about-v2.svg").write_text("".join(o), encoding="utf-8")
+    (OUT / "about-v3.svg").write_text("".join(o), encoding="utf-8")
 
 
 def main():
     OUT.mkdir(exist_ok=True)
     card("clv", "#2dd4bf", "LIVE · DATA SCIENCE", "Customer Lifetime Value",
-         ["Which customers bleed money, and which", "ones pay the bills? Told as a story."],
-         [("9,134", "customers"), ("R² 0.68", "cross-validated"), ("$1,378", "mean error")], viz_clv("#2dd4bf"))
+         ["Which customers bleed money,", "and which ones pay the bills?", "Told as an interactive story."],
+         [("9,134", "customers"), ("R² 0.68", "cross-validated"), ("$1,378", "mean error")], viz_clv("#2dd4bf"), linked=True)
     card("quant", "#fbbf24", "RESEARCH · QUANT", "Quant Terminal",
-         ["Did ML beat buy-and-hold after the", "Tata Motors split? Honest answer inside."],
-         [("23", "notebooks"), ("6", "app pages"), ("~55%", "best accuracy")], viz_stock("#fbbf24"))
+         ["Did ML beat buy-and-hold after", "the Tata Motors split? The", "honest answer is inside."],
+         [("23", "notebooks"), ("6", "app pages"), ("~55%", "best accuracy")], viz_stock("#fbbf24"), linked=True)
     card("os", "#a78bfa", "PERSONAL OS", "KARMA-OS",
-         ["My life as a dashboard: workouts, music,", "notes, agents, and what correlates."],
-         [("10", "views"), ("React", "D3 · Zustand"), ("1", "user: me")], viz_os("#a78bfa"))
+         ["My life as a dashboard:", "workouts, music, notes, agents", "and what correlates."],
+         [("10", "views"), ("React", "D3 · Zustand"), ("1", "user: me")], viz_os("#a78bfa"), linked=True)
     card("radio", "#fb7185", "LIVE · PRODUCT", "Hostel Vibes Radio",
-         ["An always-on radio for Indian hostel", "life. Every room is a mood."],
-         [("5", "rooms"), ("Realtime", "Supabase"), ("Hinglish", "all copy")], viz_radio("#fb7185"))
+         ["An always-on radio for Indian", "hostel life. Every room is", "a mood, every hour a vibe."],
+         [("5", "rooms"), ("Realtime", "Supabase"), ("Hinglish", "all copy")], viz_radio("#fb7185"), linked=True)
     card("case", "#38bdf8", "PRIVATE · AUTOMATION", "Case-Comp Engine",
-         ["From messy case brief to defended deck,", "with a quality gate on every slide."],
+         ["From messy case brief to a", "defended deck, with a quality", "gate on every slide."],
          [("HTML→PPTX", "native export"), ("gates", "fidelity checks"), ("loop", "auto-improve")], viz_case("#38bdf8"))
     card("reel", "#a3e635", "PRIVATE · AI AGENTS", "Reel Crew",
-         ["A crew of AI agents that researches,", "scripts, voices and renders short videos."],
+         ["AI agents that research,", "script, voice and render short", "videos. I approve each stage."],
          [("24", "agents"), ("local", "TTS + ASR"), ("Remotion", "render")], viz_reel("#a3e635"))
     terminal()
     print("[OK] cards written")

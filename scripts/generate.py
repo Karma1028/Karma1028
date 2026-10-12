@@ -81,10 +81,10 @@ def write_kpis(own, langs, cc):
         o.append('<rect x=".5" y=".5" width="139" height="91" rx="12" fill="none" stroke="#fff" stroke-opacity=".09"/>')
         o.append('<rect width="4" height="92" rx="2" fill="url(#v)"/>')
         o.append(f'<text class="s" x="18" y="43" font-size="32" font-weight="800" fill="#f8fafc">{esc(num)}</text>')
-        o.append(f'<text class="s" x="18" y="62" font-size="12" font-weight="600" fill="#cbd5e1">{esc(label)}</text>')
-        o.append(f'<text class="m" x="18" y="79" font-size="9.5" fill="#2dd4bf">{esc(sub)}</text>')
+        o.append(f'<text class="s" x="18" y="62" font-size="12.5" font-weight="600" fill="#cbd5e1">{esc(label)}</text>')
+        o.append(f'<text class="m" x="18" y="79" font-size="10.5" fill="#2dd4bf">{esc(sub)}</text>')
         o.append("</g></svg>")
-        (OUT / f"kpi-{i+1}.svg").write_text("".join(o), encoding="utf-8")
+        (OUT / f"kpi-{i+1}-v2.svg").write_text("".join(o), encoding="utf-8")
 
 
 def level(n, mx):
@@ -104,7 +104,7 @@ def write_activity(cc):
     o = [open_svg(w, h, "Contribution heatmap, last 20 weeks")]
     o.append('<rect width="100%" height="100%" rx="14" fill="#10162b"/>')
     o.append(f'<rect x=".5" y=".5" width="{w-1}" height="{h-1}" rx="14" fill="none" stroke="#fff" stroke-opacity=".09"/>')
-    o.append(f'<text class="m" x="14" y="26" font-size="11.5" fill="#94a3b8">LAST 20 WEEKS · {total} PUBLIC CONTRIBUTIONS / YR</text>')
+    o.append(f'<text class="m" x="14" y="26" font-size="12" fill="#94a3b8">LAST 20 WEEKS · {total} PUBLIC CONTRIBUTIONS / YR</text>')
     for wi, wk in enumerate(weeks):
         for d in wk["contributionDays"]:
             wd = datetime.date.fromisoformat(d["date"]).isoweekday() % 7
@@ -118,7 +118,7 @@ def write_activity(cc):
     for i, col in enumerate(("#161b33", "#134e4a", "#0f766e", "#2dd4bf", "#fbbf24")):
         o.append(f'<rect x="{w-118+i*17}" y="{ly-11}" width="12" height="12" rx="3" fill="{col}"/>')
     o.append("</svg>")
-    (OUT / "activity-v2.svg").write_text("".join(o), encoding="utf-8")
+    (OUT / "activity-v3.svg").write_text("".join(o), encoding="utf-8")
 
 
 def write_langs(langs):
@@ -128,7 +128,7 @@ def write_langs(langs):
     o = [open_svg(w, h, "Language breakdown of public code")]
     o.append(f'<rect width="{w}" height="{h}" rx="14" fill="#10162b"/>')
     o.append(f'<rect x=".5" y=".5" width="{w-1}" height="{h-1}" rx="14" fill="none" stroke="#fff" stroke-opacity=".09"/>')
-    o.append('<text class="m" x="16" y="26" font-size="11.5" fill="#94a3b8">LANGUAGES · PUBLIC CODE</text>')
+    o.append('<text class="m" x="16" y="26" font-size="12" fill="#94a3b8">LANGUAGES · PUBLIC CODE</text>')
     o.append(f'<clipPath id="c"><rect x="16" y="38" width="{w-32}" height="14" rx="7"/></clipPath>')
     o.append('<g clip-path="url(#c)"><g style="transform-origin:16px 0;animation:grow 1.2s ease-out both">')
     cur = 16.0
@@ -143,9 +143,9 @@ def write_langs(langs):
         col = LANG_COLORS.get(name, "#64748b")
         o.append(f'<circle cx="{x+5}" cy="{y-4}" r="5" fill="{col}"/>')
         o.append(f'<text class="s" x="{x+16}" y="{y}" font-size="13.5" font-weight="600" fill="#e2e8f0">{esc(name)}</text>')
-        o.append(f'<text class="m" x="{x+16}" y="{y+14}" font-size="10.5" fill="#94a3b8">{100*val/total:.1f}%</text>')
+        o.append(f'<text class="m" x="{x+16}" y="{y+14}" font-size="11.5" fill="#94a3b8">{100*val/total:.1f}%</text>')
     o.append("</svg>")
-    (OUT / "langs-v2.svg").write_text("".join(o), encoding="utf-8")
+    (OUT / "langs-v3.svg").write_text("".join(o), encoding="utf-8")
 
 
 def write_timeline(own):
@@ -155,7 +155,7 @@ def write_timeline(own):
     o = [open_svg(w, h, "Build log of public repositories")]
     o.append(f'<rect width="{w}" height="{h}" rx="14" fill="#10162b"/>')
     o.append(f'<rect x=".5" y=".5" width="{w-1}" height="{h-1}" rx="14" fill="none" stroke="#fff" stroke-opacity=".09"/>')
-    o.append('<text class="m" x="16" y="26" font-size="11.5" fill="#94a3b8">PUBLIC REPOS · NEWEST LAST</text>')
+    o.append('<text class="m" x="16" y="26" font-size="12" fill="#94a3b8">PUBLIC REPOS · NEWEST LAST</text>')
     top, x = 58, 34
     bottom = top + (len(rows) - 1) * gap
     o.append(f'<line x1="{x}" y1="{top}" x2="{x}" y2="{bottom}" stroke="#fff" stroke-opacity=".12" stroke-width="2"/>')
@@ -168,15 +168,15 @@ def write_timeline(own):
         y = top + i * gap
         name = esc(r["name"].replace("---", " ").replace("_", " "))
         desc = (r.get("description") or "").strip()
-        desc = esc(desc if len(desc) <= 52 else desc[:51] + "…")
+        desc = esc(desc if len(desc) <= 50 else desc[:50].rsplit(" ", 1)[0] + "…")
         o.append(f'<g style="animation:up .5s ease-out {0.3+i*.2:.2f}s both">')
         o.append(f'<circle cx="{x}" cy="{y}" r="7" fill="#10162b" stroke="url(#v)" stroke-width="3"/>')
         o.append(f'<text class="s" x="{x+22}" y="{y-3}" font-size="15" font-weight="700" fill="#f1f5f9">{name}</text>')
-        o.append(f'<text class="m" x="{x+22}" y="{y+13}" font-size="10.5" fill="#2dd4bf">{r["created_at"][:7]}</text>')
-        o.append(f'<text class="s" x="{x+22}" y="{y+29}" font-size="11.5" fill="#94a3b8">{desc}</text>')
+        o.append(f'<text class="m" x="{x+22}" y="{y+13}" font-size="11.5" fill="#2dd4bf">{r["created_at"][:7]}</text>')
+        o.append(f'<text class="s" x="{x+22}" y="{y+29}" font-size="12" fill="#94a3b8">{desc}</text>')
         o.append("</g>")
     o.append("</svg>")
-    (OUT / "timeline-v2.svg").write_text("".join(o), encoding="utf-8")
+    (OUT / "timeline-v3.svg").write_text("".join(o), encoding="utf-8")
 
 
 def main():

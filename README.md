@@ -2,31 +2,31 @@
   <img src="assets/banner-v3.svg" alt="Tuhin Bhattacharya: data analyst and AI builder" width="100%">
 </p>
 
+<h3 align="center">I find the story hiding in the data, then build the thing that lets people see it.</h3>
+
 <p align="center">
-  <a href="mailto:tuhin.gim@gmail.com"><img src="https://img.shields.io/badge/Email-tuhin.gim%40gmail.com-0b1020?style=for-the-badge&logo=gmail&logoColor=2dd4bf&labelColor=0b1020&color=151a33" alt="Email"></a>
-  <a href="https://unique-rugelach-c75c88.netlify.app/"><img src="https://img.shields.io/badge/Live_demo-CLV_Story-0b1020?style=for-the-badge&logo=netlify&logoColor=a78bfa&labelColor=0b1020&color=151a33" alt="Live demo"></a>
+  <a href="mailto:tuhin.gim@gmail.com"><img src="https://img.shields.io/badge/Email-tuhin.gim%40gmail.com-0b1020?style=for-the-badge&logo=gmail&logoColor=2dd4bf&labelColor=0b1020&color=151a33" alt="Email me"></a>
+  <a href="https://unique-rugelach-c75c88.netlify.app/"><img src="https://img.shields.io/badge/Live_demo-CLV_Story-0b1020?style=for-the-badge&logo=netlify&logoColor=a78bfa&labelColor=0b1020&color=151a33" alt="Open the live CLV demo"></a>
   <img src="https://img.shields.io/badge/Status-open_to_roles-0b1020?style=for-the-badge&logo=target&logoColor=fbbf24&labelColor=0b1020&color=151a33" alt="Open to roles">
 </p>
 
 <p align="center">
-  <img src="assets/about-v2.svg?v=2" alt="Terminal card: whoami, focus, shipped projects, status" width="520">
+  <img src="assets/about-v3.svg" alt="Terminal card: whoami, focus, shipped projects, hiring status" width="560">
 </p>
-
-<h3 align="center">I find the story hiding in the data, then build the thing that lets people see it.</h3>
 
 <p align="center"><sub><b>ACTIVITY</b></sub></p>
 <p align="center">
-  <img src="assets/kpi-1.svg?v=7" alt="KPI 1" width="140">
-  <img src="assets/kpi-2.svg?v=7" alt="KPI 2" width="140">
-  <img src="assets/kpi-3.svg?v=7" alt="KPI 3" width="140">
-  <img src="assets/kpi-4.svg?v=7" alt="KPI 4" width="140">
+  <img src="assets/kpi-1-v2.svg" alt="Public repositories" width="140">
+  <img src="assets/kpi-2-v2.svg" alt="Commits in the last 12 months" width="140">
+  <img src="assets/kpi-3-v2.svg" alt="Languages used" width="140">
+  <img src="assets/kpi-4-v2.svg" alt="Contributions in the last 12 months" width="140">
 </p>
 <p align="center"><sub><b>WORK IN NUMBERS</b></sub></p>
 <p align="center">
-  <img src="assets/kpi-5.svg?v=7" alt="KPI 5" width="140">
-  <img src="assets/kpi-6.svg?v=7" alt="KPI 6" width="140">
-  <img src="assets/kpi-7.svg?v=7" alt="KPI 7" width="140">
-  <img src="assets/kpi-8.svg?v=7" alt="KPI 8" width="140">
+  <img src="assets/kpi-5-v2.svg" alt="9,134 customers modelled" width="140">
+  <img src="assets/kpi-6-v2.svg" alt="24 variables analysed" width="140">
+  <img src="assets/kpi-7-v2.svg" alt="10 dashboard views in KARMA-OS" width="140">
+  <img src="assets/kpi-8-v2.svg" alt="3 LLM providers wired" width="140">
 </p>
 
 ---
@@ -34,12 +34,12 @@
 ## 🚀 What I've built
 
 <p align="center">
-  <a href="https://github.com/Karma1028/CLV_IBM-project"><img src="assets/card-clv.svg?v=7" alt="Customer Lifetime Value" width="400"></a>
-  <a href="https://github.com/Karma1028/Stock_App"><img src="assets/card-quant.svg?v=7" alt="Quant Terminal" width="400"></a>
-  <a href="https://github.com/Karma1028/Karma-OS"><img src="assets/card-os.svg?v=7" alt="KARMA-OS" width="400"></a>
-  <a href="https://github.com/Karma1028/hostel-vibes-radio"><img src="assets/card-radio.svg?v=7" alt="Hostel Vibes Radio" width="400"></a>
-  <img src="assets/card-case.svg?v=7" alt="Case-Comp Engine (private)" width="400">
-  <img src="assets/card-reel.svg?v=7" alt="Reel Crew (private)" width="400">
+  <a href="https://github.com/Karma1028/CLV_IBM-project"><img src="assets/card-clv-v2.svg" alt="Customer Lifetime Value: live data-science project, opens the repo" width="400"></a>
+  <a href="https://github.com/Karma1028/Stock_App"><img src="assets/card-quant-v2.svg" alt="Quant Terminal: Tata Motors research app, opens the repo" width="400"></a>
+  <a href="https://github.com/Karma1028/Karma-OS"><img src="assets/card-os-v2.svg" alt="KARMA-OS: personal AI operating system dashboard, opens the repo" width="400"></a>
+  <a href="https://github.com/Karma1028/hostel-vibes-radio"><img src="assets/card-radio-v2.svg" alt="Hostel Vibes Radio: live product, opens the repo" width="400"></a>
+  <img src="assets/card-case-v2.svg" alt="Case-Comp Engine (private)" width="400">
+  <img src="assets/card-reel-v2.svg" alt="Reel Crew (private)" width="400">
 </p>
 
 <p align="center"><sub>Cards link to the repos. The bottom row is private. Client and employer work stays private too, and I'm happy to walk through the thinking in an interview.</sub></p>
@@ -92,7 +92,7 @@
 ## 🧭 Build log
 
 <p align="center">
-  <img src="assets/timeline-v2.svg?v=7" alt="Timeline of public repositories" width="440">
+  <img src="assets/timeline-v3.svg" alt="Timeline of public repositories" width="440">
 </p>
 
 ---
@@ -111,7 +111,7 @@
 ## 🧰 Toolbox
 
 <p align="center">
-  <img src="assets/langs-v2.svg?v=7" alt="Language breakdown" width="440">
+  <img src="assets/langs-v3.svg" alt="Language breakdown" width="440">
 </p>
 
 <p align="center">
@@ -136,8 +136,9 @@
 ## 🌱 Recent activity
 
 <p align="center">
-  <img src="assets/activity-v2.svg?v=7" alt="Contribution heatmap for the last 20 weeks" width="440">
+  <img src="assets/activity-v3.svg" alt="Contribution heatmap for the last 20 weeks" width="440">
 </p>
+<p align="center"><sub>Most of my work lives in private repos, so this shows public activity only.</sub></p>
 
 ---
 
