@@ -38,7 +38,7 @@ def card(slug, color, tag, title, lines, chips, viz):
     tw = 8 * len(tag) + 22
     o.append(f'<rect x="22" y="24" width="{tw}" height="22" rx="11" fill="{color}" fill-opacity=".14"/>')
     o.append(f'<text class="m" x="33" y="39" font-size="10.5" letter-spacing="1" fill="{color}">{tag}</text>')
-    o.append(f'<text class="s" x="22" y="78" font-size="22" font-weight="800" fill="#f8fafc">{title}</text>')
+    o.append(f'<text class="s" x="22" y="78" font-size="19" font-weight="800" fill="#f8fafc">{title}</text>')
     for i, ln in enumerate(lines):
         o.append(f'<text class="s" x="22" y="{102+i*18}" font-size="13" fill="#94a3b8">{ln}</text>')
     x = 22
@@ -118,7 +118,8 @@ def viz_radio(c):
     )
     live = (
         '<circle cx="4" cy="-2" r="3.5" fill="#34d399" style="animation:pulse 1.6s infinite"/>'
-        '<text class="m" x="13" y="1.5" font-size="10" fill="#34d399">live · log jaag rahe hain</text>'
+        '<text class="m" x="13" y="1.5" font-size="10" fill="#34d399">live</text>'
+        '<text class="m" x="0" y="124" font-size="10" fill="#64748b">log jaag rahe hain</text>'
     )
     return bars + live
 

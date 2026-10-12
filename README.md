@@ -24,16 +24,16 @@
 
 <table>
 <tr>
-<td width="50%"><a href="https://github.com/Karma1028/CLV_IBM-project"><img src="assets/card-clv.svg?v=4" alt="Customer Lifetime Value" width="100%"></a></td>
-<td width="50%"><a href="https://github.com/Karma1028/Stock_App"><img src="assets/card-quant.svg?v=4" alt="Quant Terminal" width="100%"></a></td>
+<td width="50%"><a href="https://github.com/Karma1028/CLV_IBM-project"><img src="assets/card-clv.svg?v=5" alt="Customer Lifetime Value" width="100%"></a></td>
+<td width="50%"><a href="https://github.com/Karma1028/Stock_App"><img src="assets/card-quant.svg?v=5" alt="Quant Terminal" width="100%"></a></td>
 </tr>
 <tr>
-<td width="50%"><a href="https://github.com/Karma1028/Karma-OS"><img src="assets/card-os.svg?v=4" alt="KARMA-OS" width="100%"></a></td>
-<td width="50%"><a href="https://github.com/Karma1028/hostel-vibes-radio"><img src="assets/card-radio.svg?v=4" alt="Hostel Vibes Radio" width="100%"></a></td>
+<td width="50%"><a href="https://github.com/Karma1028/Karma-OS"><img src="assets/card-os.svg?v=5" alt="KARMA-OS" width="100%"></a></td>
+<td width="50%"><a href="https://github.com/Karma1028/hostel-vibes-radio"><img src="assets/card-radio.svg?v=5" alt="Hostel Vibes Radio" width="100%"></a></td>
 </tr>
 <tr>
-<td width="50%"><img src="assets/card-case.svg?v=4" alt="Case-Comp Engine (private)" width="100%"></td>
-<td width="50%"><img src="assets/card-reel.svg?v=4" alt="Reel Crew (private)" width="100%"></td>
+<td width="50%"><img src="assets/card-case.svg?v=5" alt="Case-Comp Engine (private)" width="100%"></td>
+<td width="50%"><img src="assets/card-reel.svg?v=5" alt="Reel Crew (private)" width="100%"></td>
 </tr>
 </table>
 
