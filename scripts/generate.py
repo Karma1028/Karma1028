@@ -163,8 +163,8 @@ def timeline_svg(own):
     n = len(rows)
     w, h = 900, 250
     o = [svg_open(w, h)]
-    o.append('<text class="s" x="4" y="22" fill="#94a3b8" font-size="13" letter-spacing="2">BUILD LOG · PUBLIC REPOS BY DATE</text>')
-    y0, x0, x1 = 128, 50, w - 50
+    o.append('<text class="s" x="4" y="22" fill="#94a3b8" font-size="13" letter-spacing="2">PUBLIC REPOS BY CREATION DATE</text>')
+    y0, x0, x1 = 128, 100, w - 100
     o.append(f'<line x1="{x0-20}" y1="{y0}" x2="{x1+20}" y2="{y0}" stroke="#fff" stroke-opacity=".12" stroke-width="2"/>')
     o.append(f'<line x1="{x0-20}" y1="{y0}" x2="{x1+20}" y2="{y0}" stroke="url(#g)" stroke-width="3" stroke-dasharray="{w}" stroke-dashoffset="{w}"><animate attributeName="stroke-dashoffset" from="{w}" to="0" dur="2s" fill="freeze"/></line>')
     for i, r in enumerate(rows):

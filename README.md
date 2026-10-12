@@ -87,7 +87,7 @@
 ## 🧭 Build log
 
 <p align="center">
-  <img src="assets/timeline.svg?v=4" alt="Timeline of public repositories" width="100%">
+  <img src="assets/timeline.svg?v=6" alt="Timeline of public repositories" width="100%">
 </p>
 
 ---
