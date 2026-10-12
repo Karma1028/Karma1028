@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner-v2.svg?v=7" alt="Tuhin Bhattacharya: data analyst and AI builder" width="100%">
+  <img src="assets/banner-v3.svg" alt="Tuhin Bhattacharya: data analyst and AI builder" width="100%">
 </p>
 
 <p align="center">
