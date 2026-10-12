@@ -157,12 +157,40 @@ def langs_svg(langs):
     return "".join(o)
 
 
+def timeline_svg(own):
+    """Build log: public repos on a horizontal timeline by creation date."""
+    rows = sorted((r for r in own if r["name"] != USER), key=lambda r: r["created_at"])
+    n = len(rows)
+    w, h = 900, 250
+    o = [svg_open(w, h)]
+    o.append('<text class="s" x="4" y="22" fill="#94a3b8" font-size="13" letter-spacing="2">BUILD LOG · PUBLIC REPOS BY DATE</text>')
+    y0, x0, x1 = 128, 50, w - 50
+    o.append(f'<line x1="{x0-20}" y1="{y0}" x2="{x1+20}" y2="{y0}" stroke="#fff" stroke-opacity=".12" stroke-width="2"/>')
+    o.append(f'<line x1="{x0-20}" y1="{y0}" x2="{x1+20}" y2="{y0}" stroke="url(#g)" stroke-width="3" stroke-dasharray="{w}" stroke-dashoffset="{w}"><animate attributeName="stroke-dashoffset" from="{w}" to="0" dur="2s" fill="freeze"/></line>')
+    for i, r in enumerate(rows):
+        x = x0 + (x1 - x0) * (i / max(n - 1, 1))
+        up = i % 2 == 0
+        ty = y0 - 38 if up else y0 + 52
+        d = r["created_at"][:7]
+        name = r["name"].replace("---", " ").replace("_", " ")
+        name = name if len(name) <= 20 else name[:19] + "…"
+        o.append(f'<g style="animation:up .6s ease-out {0.4+i*0.25:.2f}s both">')
+        o.append(f'<line x1="{x:.1f}" y1="{y0}" x2="{x:.1f}" y2="{ty + (6 if up else -16):.1f}" stroke="#fff" stroke-opacity=".18"/>')
+        o.append(f'<circle cx="{x:.1f}" cy="{y0}" r="7" fill="#0b1020" stroke="url(#g)" stroke-width="3"/>')
+        o.append(f'<text class="s" x="{x:.1f}" y="{ty:.1f}" text-anchor="middle" font-size="14" font-weight="700" fill="#f1f5f9">{name}</text>')
+        o.append(f'<text class="m" x="{x:.1f}" y="{ty+16:.1f}" text-anchor="middle" font-size="11.5" fill="#2dd4bf">{d}</text>')
+        o.append("</g>")
+    o.append("</svg>")
+    return "".join(o)
+
+
 def main():
     OUT.mkdir(exist_ok=True)
     own, langs, cal = fetch()
     (OUT / "kpi.svg").write_text(kpi_svg(own, langs, cal), encoding="utf-8")
     (OUT / "activity.svg").write_text(activity_svg(cal), encoding="utf-8")
     (OUT / "langs.svg").write_text(langs_svg(langs), encoding="utf-8")
+    (OUT / "timeline.svg").write_text(timeline_svg(own), encoding="utf-8")
     print(f"[OK] repos={len(own)} langs={len(langs)}")
 
 
