@@ -156,34 +156,34 @@ def viz_reel(c):
 
 
 def terminal():
-    w, h = 900, 250
+    w, h = 520, 262
     lines = [
-        ("#2dd4bf", "tuhin@karma", ":~$ ", "whoami", 0.3),
-        (None, "", "", "Tuhin Bhattacharya · data analyst &amp; AI builder · Goa, India", 1.0),
-        ("#2dd4bf", "tuhin@karma", ":~$ ", "cat focus.txt", 1.9),
-        (None, "", "", "analytics → models → products people actually use", 2.5),
-        ("#2dd4bf", "tuhin@karma", ":~$ ", "ls shipped/", 3.4),
-        (None, "", "", "clv-story/  quant-terminal/  karma-os/  hostel-radio/  case-engine/  reel-crew/", 4.0),
-        ("#2dd4bf", "tuhin@karma", ":~$ ", "status --hiring", 4.9),
-        ("#fbbf24", "", "", "open to data analyst · analytics engineering · AI engineer roles", 5.5),
+        ("cmd", "whoami", 0.3),
+        ("out", "Tuhin Bhattacharya · Goa, India", 0.9),
+        ("cmd", "cat focus.txt", 1.7),
+        ("out", "data -> models -> products people use", 2.3),
+        ("cmd", "ls shipped/", 3.1),
+        ("out", "clv/  quant/  karma-os/  radio/  case/  reel/", 3.7),
+        ("cmd", "status --hiring", 4.5),
+        ("hot", "open to analyst / AI engineer roles", 5.1),
     ]
     o = [HEAD.format(w=w, h=h, label="Terminal card: about Tuhin", extra="")]
     o.append(f'<rect width="{w}" height="{h}" rx="14" fill="#0b1020"/>')
     o.append(f'<rect x=".5" y=".5" width="{w-1}" height="{h-1}" rx="14" fill="none" stroke="#fff" stroke-opacity=".09"/>')
-    o.append('<rect width="900" height="34" rx="14" fill="#151a33"/><rect y="20" width="900" height="14" fill="#151a33"/>')
+    o.append(f'<rect width="{w}" height="34" rx="14" fill="#151a33"/><rect y="20" width="{w}" height="14" fill="#151a33"/>')
     for i, col in enumerate(("#fb7185", "#fbbf24", "#34d399")):
-        o.append(f'<circle cx="{22+i*20}" cy="17" r="6" fill="{col}"/>')
-    o.append('<text class="m" x="450" y="21" text-anchor="middle" font-size="12" fill="#64748b">karma — about.sh</text>')
-    for i, (col, user, path, text, delay) in enumerate(lines):
-        y = 66 + i * 24
+        o.append(f'<circle cx="{20+i*18}" cy="17" r="5.5" fill="{col}"/>')
+    o.append(f'<text class="m" x="{w//2}" y="21" text-anchor="middle" font-size="12" fill="#64748b">karma: about.sh</text>')
+    for i, (kind, text, delay) in enumerate(lines):
+        y = 68 + i * 24
         o.append(f'<g style="animation:fade .01s linear {delay}s both">')
-        if user:
-            o.append(f'<text class="m" x="24" y="{y}" font-size="14"><tspan fill="{col}" font-weight="700">{user}</tspan><tspan fill="#94a3b8">{path}</tspan><tspan fill="#e2e8f0">{text}</tspan></text>')
+        if kind == "cmd":
+            o.append(f'<text class="m" x="20" y="{y}" font-size="15"><tspan fill="#2dd4bf" font-weight="700">$ </tspan><tspan fill="#e2e8f0">{text}</tspan></text>')
         else:
-            fill = col or "#cbd5e1"
-            o.append(f'<text class="m" x="24" y="{y}" font-size="14" fill="{fill}">{text}</text>')
+            fill = "#fbbf24" if kind == "hot" else "#94a3b8"
+            o.append(f'<text class="m" x="20" y="{y}" font-size="15" fill="{fill}">{text}</text>')
         o.append("</g>")
-    o.append(f'<rect x="24" y="{66+8*24-12}" width="9" height="16" fill="#2dd4bf" style="animation:blink 1s steps(1) 6s infinite"/>')
+    o.append(f'<rect x="20" y="{68+8*24-12}" width="9" height="16" fill="#2dd4bf" style="animation:blink 1s steps(1) 6s infinite"/>')
     o.append("</svg>")
     (OUT / "about.svg").write_text("".join(o), encoding="utf-8")
 

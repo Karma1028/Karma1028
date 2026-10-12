@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.svg?v=4" alt="Tuhin Bhattacharya: data analyst and AI builder" width="100%">
+  <img src="assets/banner.svg?v=7" alt="Tuhin Bhattacharya: data analyst and AI builder" width="100%">
 </p>
 
 <p align="center">
@@ -9,33 +9,38 @@
 </p>
 
 <p align="center">
-  <img src="assets/about.svg?v=1" alt="Terminal card: whoami, focus, shipped projects, status" width="100%">
+  <img src="assets/about.svg?v=2" alt="Terminal card: whoami, focus, shipped projects, status" width="520">
 </p>
 
 <h3 align="center">I find the story hiding in the data, then build the thing that lets people see it.</h3>
 
+<p align="center"><sub><b>ACTIVITY</b></sub></p>
 <p align="center">
-  <img src="assets/kpi.svg?v=4" alt="Activity and work in numbers" width="100%">
+  <img src="assets/kpi-1.svg?v=7" alt="KPI 1" width="140">
+  <img src="assets/kpi-2.svg?v=7" alt="KPI 2" width="140">
+  <img src="assets/kpi-3.svg?v=7" alt="KPI 3" width="140">
+  <img src="assets/kpi-4.svg?v=7" alt="KPI 4" width="140">
+</p>
+<p align="center"><sub><b>WORK IN NUMBERS</b></sub></p>
+<p align="center">
+  <img src="assets/kpi-5.svg?v=7" alt="KPI 5" width="140">
+  <img src="assets/kpi-6.svg?v=7" alt="KPI 6" width="140">
+  <img src="assets/kpi-7.svg?v=7" alt="KPI 7" width="140">
+  <img src="assets/kpi-8.svg?v=7" alt="KPI 8" width="140">
 </p>
 
 ---
 
 ## 🚀 What I've built
 
-<table>
-<tr>
-<td width="50%"><a href="https://github.com/Karma1028/CLV_IBM-project"><img src="assets/card-clv.svg?v=5" alt="Customer Lifetime Value" width="100%"></a></td>
-<td width="50%"><a href="https://github.com/Karma1028/Stock_App"><img src="assets/card-quant.svg?v=5" alt="Quant Terminal" width="100%"></a></td>
-</tr>
-<tr>
-<td width="50%"><a href="https://github.com/Karma1028/Karma-OS"><img src="assets/card-os.svg?v=5" alt="KARMA-OS" width="100%"></a></td>
-<td width="50%"><a href="https://github.com/Karma1028/hostel-vibes-radio"><img src="assets/card-radio.svg?v=5" alt="Hostel Vibes Radio" width="100%"></a></td>
-</tr>
-<tr>
-<td width="50%"><img src="assets/card-case.svg?v=5" alt="Case-Comp Engine (private)" width="100%"></td>
-<td width="50%"><img src="assets/card-reel.svg?v=5" alt="Reel Crew (private)" width="100%"></td>
-</tr>
-</table>
+<p align="center">
+  <a href="https://github.com/Karma1028/CLV_IBM-project"><img src="assets/card-clv.svg?v=7" alt="Customer Lifetime Value" width="400"></a>
+  <a href="https://github.com/Karma1028/Stock_App"><img src="assets/card-quant.svg?v=7" alt="Quant Terminal" width="400"></a>
+  <a href="https://github.com/Karma1028/Karma-OS"><img src="assets/card-os.svg?v=7" alt="KARMA-OS" width="400"></a>
+  <a href="https://github.com/Karma1028/hostel-vibes-radio"><img src="assets/card-radio.svg?v=7" alt="Hostel Vibes Radio" width="400"></a>
+  <img src="assets/card-case.svg?v=7" alt="Case-Comp Engine (private)" width="400">
+  <img src="assets/card-reel.svg?v=7" alt="Reel Crew (private)" width="400">
+</p>
 
 <p align="center"><sub>Cards link to the repos. The bottom row is private. Client and employer work stays private too, and I'm happy to walk through the thinking in an interview.</sub></p>
 
@@ -87,7 +92,7 @@
 ## 🧭 Build log
 
 <p align="center">
-  <img src="assets/timeline.svg?v=6" alt="Timeline of public repositories" width="100%">
+  <img src="assets/timeline.svg?v=7" alt="Timeline of public repositories" width="440">
 </p>
 
 ---
@@ -106,7 +111,7 @@
 ## 🧰 Toolbox
 
 <p align="center">
-  <img src="assets/langs.svg?v=4" alt="Language breakdown" width="100%">
+  <img src="assets/langs.svg?v=7" alt="Language breakdown" width="440">
 </p>
 
 <p align="center">
@@ -131,7 +136,7 @@
 ## 🌱 Recent activity
 
 <p align="center">
-  <img src="assets/activity.svg?v=4" alt="Contribution heatmap for the last six months" width="100%">
+  <img src="assets/activity.svg?v=7" alt="Contribution heatmap for the last 20 weeks" width="440">
 </p>
 
 ---
