@@ -46,49 +46,6 @@
 
 ---
 
-## 📖 Four stories, in order of how much they taught me
-
-### 1. The customers who bleed money
-**The question.** An insurer has 9,134 policyholders. What is each one actually worth, and who should it stop chasing?
-
-**What I did.** Forensic EDA first. Then I removed `Total Claim Amount` and the customer ID before touching a model, because both leak the answer. Then a ladder of models, each one justified by the failure of the one before.
-
-**What I found.**
-- Linear models scored a *negative* R². The relationships were non-linear, so the simple story was wrong.
-- A tuned Random Forest reached **R² ≈ 0.68 (±0.02, cross-validated)** with **~$1,378 mean error**, against **~$4,100** for the "just guess the average" baseline. That's about a third of the error.
-- **Monthly premium drove ~84%** of the prediction, and agent-acquired customers were worth **23% more** than digital ones.
-- K-Means turned the model into four customer personas, including "bleeding neck" segments with loss ratios above 150%.
-
-**So what.** The report projects more than **$3.4M a year** of value from treating those personas differently. That figure is a projection from my own assumptions, not a realised result, and the report says so. I shipped it as a 10-chapter interactive story with a CLV predictor you can play with: **[open the live site](https://unique-rugelach-c75c88.netlify.app/)**.
-
-### 2. A ticker that vanished overnight
-**The question.** In January 2025 Tata Motors split in two, and the old ticker was delisted. Does a machine-learning overlay beat buy-and-hold on the new companies?
-
-**What I did.** Rebuilt the data pipeline around five new series (the two demerged entities, Maruti as a peer, NIFTY 50 and NIFTY Auto as benchmarks) and tagged five market regimes. 23 notebooks later: feature selection, XGBoost and LightGBM, an LSTM with Monte-Carlo-dropout uncertainty, a GARCH volatility gate, an HMM regime router and an LLM agent that writes the report. The research lives in the notebooks, and a Streamlit app wraps the models, the volatility gate and the agent.
-
-**What I found.**
-- The best classifier hit **~55% directional accuracy**. In an efficient market that is a real edge and also a small one.
-- **Fewer features won.** 30+ shrank to 10-15, and volume and rolling volatility carried the most SHAP weight.
-- **ML helped risk more than return.** After costs, buy-and-hold was hard to beat. The overlay's gain was lower drawdowns.
-
-**So what.** The most valuable output was knowing exactly how small the edge is. See the [repo](https://github.com/Karma1028/Stock_App) for the full write-up and the honest limitations section.
-
-### 3. My own data, in one place
-**The question.** I lift, I listen to a lot of music, I write notes, and I run AI agents. Why were all of that in different apps?
-
-**What I did.** Built **KARMA-OS**, a 10-view dashboard (Today, Fitness, Vault, Spotify, Memory, Agents, Intel, Tasks, Analytics and an Overview). It has load-ramp charts, a knowledge-vault treemap, an agent delegation graph and a correlation lab across my own streams.
-
-**So what.** It's the project where I practise product thinking on a user I can interview any time. Data currently flows in through a manual pipeline. Live sync is the next milestone.
-
-### 4. A radio for 2 AM corridors
-**The idea.** Indian hostel life has a soundtrack and a mood for every hour: the 2 AM corridor, the mess line, exam-night grind, power-cut jam.
-
-**What I did.** Built **Hostel Vibes Radio**, where tapping a room swaps the whole scene *and* the music. A Supabase realtime presence counter shows how many people are awake right now, and the copy is Hinglish throughout.
-
-**So what.** A reminder that some products win on feel, not features.
-
----
-
 ## 🧭 Build log
 
 <p align="center">
