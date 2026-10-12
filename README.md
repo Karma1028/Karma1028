@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="Tuhin Bhattacharya: data analyst and AI builder" width="100%">
+  <img src="assets/banner.svg?v=2" alt="Tuhin Bhattacharya: data analyst and AI builder" width="100%">
 </p>
 
 <p align="center">
@@ -13,7 +13,7 @@
 <br>
 
 <p align="center">
-  <img src="assets/kpi.svg" alt="Activity and work in numbers" width="100%">
+  <img src="assets/kpi.svg?v=2" alt="Activity and work in numbers" width="100%">
 </p>
 
 <br>
@@ -96,7 +96,7 @@ A production-style portfolio: profile, journey, skills, projects and contact, wi
 ## 🧰 Toolbox
 
 <p align="center">
-  <img src="assets/langs.svg" alt="Language breakdown" width="100%">
+  <img src="assets/langs.svg?v=2" alt="Language breakdown" width="100%">
 </p>
 
 <p align="center">
@@ -119,7 +119,7 @@ A production-style portfolio: profile, journey, skills, projects and contact, wi
 ## 🌱 Recent activity
 
 <p align="center">
-  <img src="assets/activity.svg" alt="Contribution heatmap for the last 12 months" width="100%">
+  <img src="assets/activity.svg?v=2" alt="Contribution heatmap for the last 12 months" width="100%">
 </p>
 
 <br>
