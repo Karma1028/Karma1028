@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/terminal.svg?v=4" alt="Terminal card: whoami, focus, shipped projects, status" width="100%">
+  <img src="assets/about.svg?v=1" alt="Terminal card: whoami, focus, shipped projects, status" width="100%">
 </p>
 
 <h3 align="center">I find the story hiding in the data, then build the thing that lets people see it.</h3>
