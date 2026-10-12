@@ -73,7 +73,7 @@ def kpi_svg(own, langs, cal):
     ]
     work = [
         ("9,134", "customers modelled", "CLV · XGBoost"),
-        ("176", "brand codes netted", "MIS · Royal Enfield"),
+        ("24", "variables analysed", "CLV · IBM dataset"),
         ("10", "dashboard views", "KARMA-OS"),
         ("3", "AI providers wired", "Groq·Gemini·OpenRouter"),
     ]

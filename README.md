@@ -33,10 +33,10 @@
 </td>
 <td width="50%" valign="top">
 
-### 📊 [Royal Enfield MIS Dashboard](https://github.com/Karma1028/MIS---InfoLeap-X-RoyalEnfield)
-Acceptor / rejector / booked-but-cancelled segment analytics recomputed from raw research files. Significance testing, brand-wise breakdowns, and a 4-level open-ended netting taxonomy. Built at Infoleap.
+### 🏆 Case-competition engine &nbsp;`private`
+Autonomous analysis-to-deck pipeline: HTML-first design, native PowerPoint export, fidelity gates and an improve loop. Demo on request.
 
-`Python` `Streamlit` `Plotly` `LLM-assisted analysis`
+`Python` `LLM agents` `PPTX`
 
 </td>
 </tr>
@@ -79,7 +79,7 @@ A production-style portfolio: profile, journey, skills, projects and contact, wi
 </tr>
 </table>
 
-<sub>Also private, happy to walk through: an autonomous case-competition analysis and deck engine, and a multi-agent short-form content pipeline.</sub>
+<sub>Client and employer work stays private. Happy to walk through architecture and results in an interview.</sub>
 
 <br>
 
