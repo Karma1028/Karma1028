@@ -158,7 +158,7 @@ def terminal():
     w, h = 900, 250
     lines = [
         ("#2dd4bf", "tuhin@karma", ":~$ ", "whoami", 0.3),
-        (None, "", "", "Tuhin Bhattacharya · data analyst & AI builder · Goa, India", 1.0),
+        (None, "", "", "Tuhin Bhattacharya · data analyst &amp; AI builder · Goa, India", 1.0),
         ("#2dd4bf", "tuhin@karma", ":~$ ", "cat focus.txt", 1.9),
         (None, "", "", "analytics → models → products people actually use", 2.5),
         ("#2dd4bf", "tuhin@karma", ":~$ ", "ls shipped/", 3.4),

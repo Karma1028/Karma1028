@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.svg?v=3" alt="Tuhin Bhattacharya: data analyst and AI builder" width="100%">
+  <img src="assets/banner.svg?v=4" alt="Tuhin Bhattacharya: data analyst and AI builder" width="100%">
 </p>
 
 <p align="center">
@@ -9,13 +9,13 @@
 </p>
 
 <p align="center">
-  <img src="assets/terminal.svg?v=3" alt="Terminal card: whoami, focus, shipped projects, status" width="100%">
+  <img src="assets/terminal.svg?v=4" alt="Terminal card: whoami, focus, shipped projects, status" width="100%">
 </p>
 
 <h3 align="center">I find the story hiding in the data, then build the thing that lets people see it.</h3>
 
 <p align="center">
-  <img src="assets/kpi.svg?v=3" alt="Activity and work in numbers" width="100%">
+  <img src="assets/kpi.svg?v=4" alt="Activity and work in numbers" width="100%">
 </p>
 
 ---
@@ -24,16 +24,16 @@
 
 <table>
 <tr>
-<td width="50%"><a href="https://github.com/Karma1028/CLV_IBM-project"><img src="assets/card-clv.svg?v=3" alt="Customer Lifetime Value" width="100%"></a></td>
-<td width="50%"><a href="https://github.com/Karma1028/Stock_App"><img src="assets/card-quant.svg?v=3" alt="Quant Terminal" width="100%"></a></td>
+<td width="50%"><a href="https://github.com/Karma1028/CLV_IBM-project"><img src="assets/card-clv.svg?v=4" alt="Customer Lifetime Value" width="100%"></a></td>
+<td width="50%"><a href="https://github.com/Karma1028/Stock_App"><img src="assets/card-quant.svg?v=4" alt="Quant Terminal" width="100%"></a></td>
 </tr>
 <tr>
-<td width="50%"><a href="https://github.com/Karma1028/Karma-OS"><img src="assets/card-os.svg?v=3" alt="KARMA-OS" width="100%"></a></td>
-<td width="50%"><a href="https://github.com/Karma1028/hostel-vibes-radio"><img src="assets/card-radio.svg?v=3" alt="Hostel Vibes Radio" width="100%"></a></td>
+<td width="50%"><a href="https://github.com/Karma1028/Karma-OS"><img src="assets/card-os.svg?v=4" alt="KARMA-OS" width="100%"></a></td>
+<td width="50%"><a href="https://github.com/Karma1028/hostel-vibes-radio"><img src="assets/card-radio.svg?v=4" alt="Hostel Vibes Radio" width="100%"></a></td>
 </tr>
 <tr>
-<td width="50%"><img src="assets/card-case.svg?v=3" alt="Case-Comp Engine (private)" width="100%"></td>
-<td width="50%"><img src="assets/card-reel.svg?v=3" alt="Reel Crew (private)" width="100%"></td>
+<td width="50%"><img src="assets/card-case.svg?v=4" alt="Case-Comp Engine (private)" width="100%"></td>
+<td width="50%"><img src="assets/card-reel.svg?v=4" alt="Reel Crew (private)" width="100%"></td>
 </tr>
 </table>
 
@@ -87,7 +87,7 @@
 ## 🧭 Build log
 
 <p align="center">
-  <img src="assets/timeline.svg?v=3" alt="Timeline of public repositories" width="100%">
+  <img src="assets/timeline.svg?v=4" alt="Timeline of public repositories" width="100%">
 </p>
 
 ---
@@ -106,7 +106,7 @@
 ## 🧰 Toolbox
 
 <p align="center">
-  <img src="assets/langs.svg?v=3" alt="Language breakdown" width="100%">
+  <img src="assets/langs.svg?v=4" alt="Language breakdown" width="100%">
 </p>
 
 <p align="center">
@@ -131,7 +131,7 @@
 ## 🌱 Recent activity
 
 <p align="center">
-  <img src="assets/activity.svg?v=3" alt="Contribution heatmap for the last six months" width="100%">
+  <img src="assets/activity.svg?v=4" alt="Contribution heatmap for the last six months" width="100%">
 </p>
 
 ---
