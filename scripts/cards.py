@@ -50,7 +50,7 @@ def card(slug, color, tag, title, lines, chips, viz, linked=False):
         o.append(f'<text class="m" x="{w-20}" y="39" text-anchor="end" font-size="11" font-weight="700" fill="{color}">open repo ↗</text>')
     o.append(f'<g transform="translate(286,56)">{viz}</g>')
     o.append("</svg>")
-    (OUT / f"card-{slug}-v2.svg").write_text("".join(o), encoding="utf-8")
+    (OUT / f"card-{slug}-v3.svg").write_text("".join(o), encoding="utf-8")
 
 
 def viz_clv(c):
@@ -105,8 +105,8 @@ def viz_os(c):
             f'><animate attributeName="stroke-dashoffset" from="{circ:.1f}" to="{circ*(1-frac):.1f}" '
             f'dur="1.6s" begin="{i*.3:.1f}s" fill="freeze"/></circle>'
         )
-    out.append('<text class="m" x="64" y="58" text-anchor="middle" font-size="16" font-weight="800" fill="#f8fafc">10</text>')
-    out.append('<text class="m" x="64" y="70" text-anchor="middle" font-size="9" fill="#94a3b8">views</text>')
+    out.append('<text class="m" x="64" y="56" text-anchor="middle" font-size="17" font-weight="800" fill="#f8fafc">10</text>')
+    out.append('<text class="m" x="64" y="72" text-anchor="middle" font-size="9" fill="#94a3b8">views</text>')
     out.append('<text class="m" x="0" y="124" font-size="11" fill="#94a3b8">fitness · vault · memory</text>')
     return "".join(out)
 

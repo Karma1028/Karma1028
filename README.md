@@ -34,12 +34,12 @@
 ## 🚀 What I've built
 
 <p align="center">
-  <a href="https://github.com/Karma1028/CLV_IBM-project"><img src="assets/card-clv-v2.svg" alt="Customer Lifetime Value: live data-science project, opens the repo" width="400"></a>
-  <a href="https://github.com/Karma1028/Stock_App"><img src="assets/card-quant-v2.svg" alt="Quant Terminal: Tata Motors research app, opens the repo" width="400"></a>
-  <a href="https://github.com/Karma1028/Karma-OS"><img src="assets/card-os-v2.svg" alt="KARMA-OS: personal AI operating system dashboard, opens the repo" width="400"></a>
-  <a href="https://github.com/Karma1028/hostel-vibes-radio"><img src="assets/card-radio-v2.svg" alt="Hostel Vibes Radio: live product, opens the repo" width="400"></a>
-  <img src="assets/card-case-v2.svg" alt="Case-Comp Engine (private)" width="400">
-  <img src="assets/card-reel-v2.svg" alt="Reel Crew (private)" width="400">
+  <a href="https://github.com/Karma1028/CLV_IBM-project"><img src="assets/card-clv-v3.svg" alt="Customer Lifetime Value: live data-science project, opens the repo" width="400"></a>
+  <a href="https://github.com/Karma1028/Stock_App"><img src="assets/card-quant-v3.svg" alt="Quant Terminal: Tata Motors research app, opens the repo" width="400"></a>
+  <a href="https://github.com/Karma1028/Karma-OS"><img src="assets/card-os-v3.svg" alt="KARMA-OS: personal AI operating system dashboard, opens the repo" width="400"></a>
+  <a href="https://github.com/Karma1028/hostel-vibes-radio"><img src="assets/card-radio-v3.svg" alt="Hostel Vibes Radio: live product, opens the repo" width="400"></a>
+  <img src="assets/card-case-v3.svg" alt="Case-Comp Engine (private)" width="400">
+  <img src="assets/card-reel-v3.svg" alt="Reel Crew (private)" width="400">
 </p>
 
 <p align="center"><sub>Cards link to the repos. The bottom row is private. Client and employer work stays private too, and I'm happy to walk through the thinking in an interview.</sub></p>
