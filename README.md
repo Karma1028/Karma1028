@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.svg?v=7" alt="Tuhin Bhattacharya: data analyst and AI builder" width="100%">
+  <img src="assets/banner-v2.svg?v=7" alt="Tuhin Bhattacharya: data analyst and AI builder" width="100%">
 </p>
 
 <p align="center">
@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/about.svg?v=2" alt="Terminal card: whoami, focus, shipped projects, status" width="520">
+  <img src="assets/about-v2.svg?v=2" alt="Terminal card: whoami, focus, shipped projects, status" width="520">
 </p>
 
 <h3 align="center">I find the story hiding in the data, then build the thing that lets people see it.</h3>
@@ -92,7 +92,7 @@
 ## 🧭 Build log
 
 <p align="center">
-  <img src="assets/timeline.svg?v=7" alt="Timeline of public repositories" width="440">
+  <img src="assets/timeline-v2.svg?v=7" alt="Timeline of public repositories" width="440">
 </p>
 
 ---
@@ -111,7 +111,7 @@
 ## 🧰 Toolbox
 
 <p align="center">
-  <img src="assets/langs.svg?v=7" alt="Language breakdown" width="440">
+  <img src="assets/langs-v2.svg?v=7" alt="Language breakdown" width="440">
 </p>
 
 <p align="center">
@@ -136,7 +136,7 @@
 ## 🌱 Recent activity
 
 <p align="center">
-  <img src="assets/activity.svg?v=7" alt="Contribution heatmap for the last 20 weeks" width="440">
+  <img src="assets/activity-v2.svg?v=7" alt="Contribution heatmap for the last 20 weeks" width="440">
 </p>
 
 ---

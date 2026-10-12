@@ -185,7 +185,7 @@ def terminal():
         o.append("</g>")
     o.append(f'<rect x="20" y="{68+8*24-12}" width="9" height="16" fill="#2dd4bf" style="animation:blink 1s steps(1) 6s infinite"/>')
     o.append("</svg>")
-    (OUT / "about.svg").write_text("".join(o), encoding="utf-8")
+    (OUT / "about-v2.svg").write_text("".join(o), encoding="utf-8")
 
 
 def main():

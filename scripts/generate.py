@@ -118,7 +118,7 @@ def write_activity(cc):
     for i, col in enumerate(("#161b33", "#134e4a", "#0f766e", "#2dd4bf", "#fbbf24")):
         o.append(f'<rect x="{w-118+i*17}" y="{ly-11}" width="12" height="12" rx="3" fill="{col}"/>')
     o.append("</svg>")
-    (OUT / "activity.svg").write_text("".join(o), encoding="utf-8")
+    (OUT / "activity-v2.svg").write_text("".join(o), encoding="utf-8")
 
 
 def write_langs(langs):
@@ -145,7 +145,7 @@ def write_langs(langs):
         o.append(f'<text class="s" x="{x+16}" y="{y}" font-size="13.5" font-weight="600" fill="#e2e8f0">{esc(name)}</text>')
         o.append(f'<text class="m" x="{x+16}" y="{y+14}" font-size="10.5" fill="#94a3b8">{100*val/total:.1f}%</text>')
     o.append("</svg>")
-    (OUT / "langs.svg").write_text("".join(o), encoding="utf-8")
+    (OUT / "langs-v2.svg").write_text("".join(o), encoding="utf-8")
 
 
 def write_timeline(own):
@@ -176,7 +176,7 @@ def write_timeline(own):
         o.append(f'<text class="s" x="{x+22}" y="{y+29}" font-size="11.5" fill="#94a3b8">{desc}</text>')
         o.append("</g>")
     o.append("</svg>")
-    (OUT / "timeline.svg").write_text("".join(o), encoding="utf-8")
+    (OUT / "timeline-v2.svg").write_text("".join(o), encoding="utf-8")
 
 
 def main():
